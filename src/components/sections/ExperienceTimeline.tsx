@@ -53,61 +53,61 @@ export function ExperienceTimeline() {
 
         <div className="max-w-6xl mx-auto">
           {/* Timeline */}
-          <div className="relative">
-            {/* Vertical Line Central */}
-            <div className="absolute left-1/2 transform -translate-x-1/2 w-0.5 h-full bg-gradient-to-b from-primary-blue to-primary-purple"></div>
+          <div className="relative px-4 sm:px-0">
+            {/* Vertical Line Central - ajustado para mobile */}
+            <div className="absolute left-6 sm:left-1/2 sm:transform sm:-translate-x-1/2 w-0.5 h-full bg-gradient-to-b from-primary-blue to-primary-purple"></div>
 
             {experiences.map((exp, index) => (
               <div
                 key={exp.id}
-                className={`relative flex items-center mb-20 ${
+                className={`relative flex items-start mb-12 sm:mb-20 ${
                   index % 2 === 0 ? 'flex-row' : 'flex-row-reverse'
                 }`}
               >
-                {/* Timeline Dot - Sempre no centro */}
-                <div className="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-card-bg border-4 border-primary-blue rounded-full z-20 cursor-pointer hover:scale-110 transition-transform duration-300"
+                {/* Timeline Dot - ajustado para mobile */}
+                <div className="absolute left-6 sm:left-1/2 transform -translate-x-1/2 w-4 h-4 bg-card-bg border-4 border-primary-blue rounded-full z-20 cursor-pointer hover:scale-110 transition-transform duration-300"
                      onClick={() => setActiveExperience(activeExperience === exp.id ? null : exp.id)}>
                 </div>
 
-                {/* Content Card - Lado esquerdo ou direito alternado */}
-                <div className={`w-5/12 ${index % 2 === 0 ? 'pr-8 text-right' : 'pl-8 text-left'}`}>
+                {/* Content Card - sempre à direita em mobile, alternado em desktop */}
+                <div className={`w-full sm:w-5/12 ml-12 sm:ml-0 ${index % 2 === 0 ? 'sm:pr-8 sm:text-right' : 'sm:pl-8 sm:text-left'}`}>
                   <div 
-                    className={`bg-card-bg border border-card-border rounded-xl p-8 cursor-pointer transition-all duration-300 hover:border-primary-blue hover:shadow-lg hover:shadow-primary-blue/10 ${
+                    className={`bg-card-bg border border-card-border rounded-xl p-6 sm:p-8 cursor-pointer transition-all duration-300 hover:border-primary-blue hover:shadow-lg hover:shadow-primary-blue/10 ${
                       activeExperience === exp.id ? 'border-primary-blue shadow-lg shadow-primary-blue/10' : ''
                     }`}
                     onClick={() => setActiveExperience(activeExperience === exp.id ? null : exp.id)}
                   >
                     {/* Date Badge */}
-                    <div className="flex items-center gap-2 text-text-muted text-sm mb-4 justify-center">
+                    <div className="flex flex-wrap items-center gap-2 text-text-muted text-sm mb-4 justify-center sm:justify-start">
                       <Calendar className="w-4 h-4" />
                       <span>{exp.period}</span>
-                      <MapPin className="w-4 h-4 ml-2" />
+                      <MapPin className="w-4 h-4" />
                       <span>{exp.location}</span>
                     </div>
 
                     {/* Header */}
-                    <div className="text-center mb-4">
-                      <div className="flex items-center gap-2 mb-2 justify-center">
+                    <div className="text-center sm:text-left mb-4">
+                      <div className="flex items-center gap-2 mb-2 justify-center sm:justify-start">
                         <Briefcase className="w-5 h-5 text-primary-blue" />
                         <span className="text-sm font-medium text-primary-blue">{exp.type}</span>
                       </div>
-                      <h3 className="text-xl font-bold text-text-primary mb-2">
+                      <h3 className="text-lg sm:text-xl font-bold text-text-primary mb-2">
                         {exp.title}
                       </h3>
-                      <h4 className="text-lg text-primary-blue font-semibold">
+                      <h4 className="text-base sm:text-lg text-primary-blue font-semibold">
                         {exp.company}
                       </h4>
-                      <div className="flex items-center gap-2 justify-center mt-2">
+                      <div className="flex items-center gap-2 justify-center sm:justify-start mt-2">
                         <span className="text-xs text-text-muted">{exp.workType}</span>
                       </div>
                     </div>
 
                     {/* Description */}
-                    <p className="text-text-secondary leading-relaxed mb-6 text-center">
+                    <p className="text-text-secondary leading-relaxed mb-6 text-center sm:text-left text-sm sm:text-base">
                       {exp.description}
                     </p>
 
-                    {/* Expandable Content - Principais Conquistas e Tecnologias */}
+                    {/* Expandable Content */}
                     {activeExperience === exp.id && (
                       <div className="space-y-6 animate-fade-in-up">
                         {/* Achievements */}
@@ -127,9 +127,9 @@ export function ExperienceTimeline() {
                         </div>
 
                         {/* Technologies */}
-                        <div className="text-center mb-6">
+                        <div className="text-center sm:text-left mb-6">
                           <h4 className="font-semibold text-text-primary mb-3">Tecnologias</h4>
-                          <div className="flex flex-wrap gap-2 justify-center">
+                          <div className="flex flex-wrap gap-2 justify-center sm:justify-start">
                             {exp.technologies.map((tech) => (
                               <span
                                 key={tech}

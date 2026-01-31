@@ -129,45 +129,43 @@ export function Hero() {
             {/* Left Content - Text */}
             <div className="text-center lg:text-left">
               {/* Integrated Name and Title */}
-              <div className="mb-12">
-                <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight">
+              <div className="mb-8 sm:mb-12">
+                <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
                   <span className="block text-primary-blue mb-2 font-light tracking-wide">
                     Gabriel Bordoni
                   </span>
-                  <span className="block text-text-primary text-3xl sm:text-4xl lg:text-5xl mb-3 font-medium">
+                  <span className="block text-text-primary text-2xl sm:text-3xl md:text-4xl lg:text-5xl mb-3 font-medium">
                     Dados reais,
                   </span>
-                  <span className="block text-primary-blue text-5xl sm:text-6xl lg:text-7xl font-bold">
+                  <span className="block text-primary-blue text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold">
                     decisões reais
                   </span>
                 </h1>
               </div>
               
               {/* Role */}
-              <p className="text-xl text-text-secondary font-medium mb-6">
+              <p className="text-lg sm:text-xl text-text-secondary font-medium mb-4 sm:mb-6 px-2 sm:px-0">
                 Analista de Dados | Python | SQL | Power BI
               </p>
               
               {/* Description */}
-              <p className="text-text-muted text-lg mb-8 leading-relaxed">
+              <p className="text-text-muted text-base sm:text-lg mb-6 sm:mb-8 leading-relaxed px-2 sm:px-0">
                 Não trabalho com suposições. Analiso dados reais para encontrar padrões 
                 que outros não veem. Cada insight é validado com evidências concretas, 
                 transformando números brutos em estratégias que funcionam.
               </p>
               
-              {/* Key Technologies - Removido pois já está no título */}
-              
               {/* CTA Buttons */}
-              <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+              <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center lg:justify-start px-2 sm:px-0">
                 <button
                   onClick={() => scrollToSection('#experience')}
-                  className="px-8 py-4 bg-primary-blue text-white rounded-lg font-semibold transition-all duration-300 hover:bg-blue-800 hover:shadow-lg hover:shadow-primary-blue/25 hover:-translate-y-1"
+                  className="w-full sm:w-auto px-6 sm:px-8 py-3 sm:py-4 bg-primary-blue text-white rounded-lg font-semibold transition-all duration-300 hover:bg-blue-800 hover:shadow-lg hover:shadow-primary-blue/25 hover:-translate-y-1 text-sm sm:text-base"
                 >
                   Ver minha trajetória
                 </button>
                 <button
                   onClick={() => scrollToSection('#contact')}
-                  className="px-8 py-4 border border-primary-blue/30 text-text-primary rounded-lg font-semibold transition-all duration-300 hover:bg-primary-blue/10 hover:border-primary-blue hover:-translate-y-1"
+                  className="w-full sm:w-auto px-6 sm:px-8 py-3 sm:py-4 border border-primary-blue/30 text-text-primary rounded-lg font-semibold transition-all duration-300 hover:bg-primary-blue/10 hover:border-primary-blue hover:-translate-y-1 text-sm sm:text-base"
                 >
                   Entrar em contato
                 </button>

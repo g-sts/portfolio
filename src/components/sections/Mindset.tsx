@@ -34,19 +34,19 @@ export function Mindset() {
           <p className="section-subtitle">Os princípios que guiam minha abordagem</p>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 px-4 sm:px-0">
           {mindsetItems.map((item) => (
             <div
               key={item.title}
-              className="text-center p-8 transition-all duration-300 group"
+              className="text-center p-6 sm:p-8 transition-all duration-300 group"
             >
-              <div className="w-20 h-20 mx-auto mb-6 bg-primary-blue/10 rounded-full flex items-center justify-center text-2xl group-hover:bg-primary-blue/20 group-hover:scale-105 transition-all duration-300">
-                <item.icon className="w-10 h-10 text-primary-blue" />
+              <div className="w-16 h-16 sm:w-20 sm:h-20 mx-auto mb-4 sm:mb-6 bg-primary-blue/10 rounded-full flex items-center justify-center text-xl sm:text-2xl group-hover:bg-primary-blue/20 group-hover:scale-105 transition-all duration-300">
+                <item.icon className="w-8 h-8 sm:w-10 sm:h-10 text-primary-blue" />
               </div>
-              <h3 className="text-xl font-semibold mb-4 text-text-primary">
+              <h3 className="text-lg sm:text-xl font-semibold mb-3 sm:mb-4 text-text-primary">
                 {item.title}
               </h3>
-              <p className="text-text-secondary leading-relaxed">
+              <p className="text-text-secondary leading-relaxed text-sm sm:text-base">
                 {item.description}
               </p>
             </div>

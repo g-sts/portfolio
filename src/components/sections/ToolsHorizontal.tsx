@@ -61,7 +61,10 @@ export function ToolsHorizontal() {
     const container = scrollContainerRef.current
     if (!container) return
 
-    const scrollAmount = 400
+    const cardWidth = container.querySelector('.flex-shrink-0')?.clientWidth || 320
+    const gap = 16 // gap-4 = 1rem = 16px
+    const scrollAmount = cardWidth + gap
+    
     container.scrollBy({
       left: direction === 'left' ? -scrollAmount : scrollAmount,
       behavior: 'smooth'
@@ -110,13 +113,17 @@ export function ToolsHorizontal() {
           {/* Horizontal Scroll */}
           <div
             ref={scrollContainerRef}
-            className="flex gap-8 overflow-x-auto scrollbar-hide scroll-smooth pb-4"
-            style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
+            className="flex gap-4 sm:gap-6 lg:gap-8 overflow-x-auto scrollbar-hide scroll-smooth pb-4 px-4 sm:px-0 scroll-snap-type-x-mandatory"
+            style={{ 
+              scrollbarWidth: 'none', 
+              msOverflowStyle: 'none',
+              scrollSnapType: 'x mandatory'
+            }}
           >
             {toolCategories.map((category) => (
               <div
                 key={category.title}
-                className="flex-shrink-0 w-80 bg-card-bg border border-card-border rounded-xl p-8"
+                className="flex-shrink-0 w-72 sm:w-80 bg-card-bg border border-card-border rounded-xl p-6 sm:p-8 scroll-snap-align-start"
               >
                 {/* Category Header */}
                 <div className="text-center mb-8">
