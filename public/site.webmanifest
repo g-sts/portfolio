@@ -1,0 +1,22 @@
+{
+  "name": "Gabriel Bordoni - Portfolio",
+  "short_name": "Portfolio",
+  "description": "Analista de Dados especializado em transformar informações brutas em insights estratégicos usando Python, SQL e Power BI.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0F172A",
+  "theme_color": "#2563EB",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["portfolio", "data", "analytics", "development"],
+  "lang": "pt-BR",
+  "scope": "/",
+  "dir": "ltr"
+}

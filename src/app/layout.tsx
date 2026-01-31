@@ -7,7 +7,7 @@ const inter = Inter({ subsets: ['latin'] })
 export const metadata: Metadata = {
   metadataBase: new URL('https://gabriel-bordoni.vercel.app'),
   title: {
-    default: 'Gabriel Bordoni - Analista de Dados | Python, SQL, Power BI',
+    default: 'Portfolio',
     template: '%s | Gabriel Bordoni'
   },
   description: 'Analista de Dados especializado em transformar informações brutas em insights estratégicos usando Python, SQL e Power BI.',
@@ -15,6 +15,12 @@ export const metadata: Metadata = {
   authors: [{ name: 'Gabriel Bordoni' }],
   creator: 'Gabriel Bordoni',
   publisher: 'Gabriel Bordoni',
+  icons: {
+    icon: '/favicon.svg',
+    shortcut: '/favicon.svg',
+    apple: '/favicon.svg',
+  },
+  manifest: '/site.webmanifest',
   robots: {
     index: true,
     follow: true,
