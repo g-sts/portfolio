@@ -40,27 +40,28 @@ export function AnalysisCycle() {
         <div className="max-w-4xl mx-auto">
           {/* Linear Process Flow */}
           <div className="relative">
-            {/* Progress Line */}
-            <div className="absolute top-12 left-0 right-0 h-0.5 bg-primary-blue/20"></div>
-            <div className="absolute top-12 left-0 h-0.5 bg-gradient-to-r from-primary-blue to-primary-purple transition-all duration-1000" style={{ width: '100%' }}></div>
+            {/* Progress Line - horizontal apenas em desktop */}
+            <div className="hidden md:block absolute top-12 left-0 right-0 h-0.5 bg-primary-blue/20"></div>
+            <div className="hidden md:block absolute top-12 left-0 h-0.5 bg-gradient-to-r from-primary-blue to-primary-purple transition-all duration-1000" style={{ width: '100%' }}></div>
             
             {/* Steps */}
-            <div className="grid grid-cols-1 md:grid-cols-5 gap-8 relative">
+            <div className="grid grid-cols-1 md:grid-cols-5 gap-8 relative px-4 md:px-0 max-w-sm mx-auto md:max-w-none">
               {cycleSteps.map((step, index) => (
                 <div key={step.title} className="text-center">
                   {/* Step Number */}
                   <div className="relative mb-6">
-                    <div className="w-24 h-24 mx-auto bg-dark-bg/50 backdrop-blur-xs border-2 border-primary-blue/30 rounded-full flex items-center justify-center hover:border-primary-blue/60 transition-all duration-300">
-                      <step.icon className="w-8 h-8 text-primary-blue" />
+                    <div className="w-20 h-20 sm:w-24 sm:h-24 mx-auto bg-dark-bg/50 backdrop-blur-xs border-2 border-primary-blue/30 rounded-full flex items-center justify-center hover:border-primary-blue/60 transition-all duration-300">
+                      <step.icon className="w-6 h-6 sm:w-8 sm:h-8 text-primary-blue" />
                     </div>
+                    {/* Number badge */}
                     <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-6 h-6 bg-primary-blue text-white text-xs rounded-full flex items-center justify-center font-semibold">
                       {index + 1}
                     </div>
                   </div>
                   
                   {/* Step Content */}
-                  <h3 className="font-semibold text-text-primary mb-2">{step.title}</h3>
-                  <p className="text-text-muted text-sm">{step.description}</p>
+                  <h3 className="font-semibold text-text-primary mb-2 text-sm sm:text-base">{step.title}</h3>
+                  <p className="text-text-muted text-xs sm:text-sm">{step.description}</p>
                 </div>
               ))}
             </div>
