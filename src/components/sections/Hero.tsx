@@ -150,9 +150,8 @@ export function Hero() {
               
               {/* Description */}
               <p className="text-text-muted text-base sm:text-lg mb-6 sm:mb-8 leading-relaxed px-2 sm:px-0">
-                Não trabalho com suposições. Analiso dados reais para encontrar padrões 
-                que outros não veem. Cada insight é validado com evidências concretas, 
-                transformando números brutos em estratégias que funcionam.
+                Gosto de pegar dados bagunçados, entender o que eles estão dizendo e 
+                transformar tudo isso em código que funciona.
               </p>
               
               {/* CTA Buttons */}

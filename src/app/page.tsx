@@ -4,6 +4,7 @@ import { Philosophy } from '@/components/sections/Philosophy'
 import { AnalysisCycle } from '@/components/sections/AnalysisCycle'
 import { ToolsHorizontal } from '@/components/sections/ToolsHorizontal'
 import { ExperienceTimeline } from '@/components/sections/ExperienceTimeline'
+import { Projects } from '@/components/sections/Projects'
 import { Mindset } from '@/components/sections/Mindset'
 import { Contact } from '@/components/sections/Contact'
 import { Footer } from '@/components/ui/Footer'
@@ -21,6 +22,7 @@ export default function Home() {
         <AnalysisCycle />
         <ToolsHorizontal />
         <ExperienceTimeline />
+        <Projects />
         <Mindset />
         <Contact />
       </main>
